@@ -1,4 +1,4 @@
-// ai.module.ts
+
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AiResolver } from './ai.resolver';

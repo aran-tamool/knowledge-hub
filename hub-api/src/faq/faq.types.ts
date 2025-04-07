@@ -1,4 +1,4 @@
-// src/faq/faq.type.ts
+
 import { Field, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
@@ -12,14 +12,7 @@ export class FaqType {
   @Field()
   answer: string;
 
-  // @Field(() => Int)
-  // questionSnippet: number;
 
-  // @Field()
-  // createdAt: Date;
-
-  // @Field()
-  // updatedAt: Date;
 }
 
 @ObjectType()

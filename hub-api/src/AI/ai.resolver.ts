@@ -1,4 +1,3 @@
-// ai.resolver.ts
 
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { AiService } from './ai.service';

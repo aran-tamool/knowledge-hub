@@ -1,4 +1,3 @@
-// ai.types.ts
 
 import { Field, InputType, ObjectType } from '@nestjs/graphql';
 
