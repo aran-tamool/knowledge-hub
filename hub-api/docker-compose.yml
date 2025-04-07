@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hub
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+
+  hub-api:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - '4000:4000'
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: hub
+    volumes:
+      - .:/usr/src/app
+    command: yarn start:dev
+
+volumes:
+  db_data:
